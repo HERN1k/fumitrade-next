@@ -8,7 +8,6 @@ import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
 import { getStaticFile } from "@/scripts/appWrapperScripts";
-import AppearanceAnimation from "@/components/general/AppearanceAnimation/AppearanceAnimation";
 import { IGalleryItem } from "@/types";
 import justifiedLayout from "justified-layout";
 import Image from "next/image";
@@ -192,50 +191,45 @@ const AboutUsGallery: FC = () => {
 
     return (
         <Window id={Constants.ABOUT_US_PAGE_GALLERY_ID} className={styles.galleryWindow}>
-            <AppearanceAnimation
-                initialPosition={Constants.BASE_APPEARANCE_ANIMATION.clone()}
-                delay={250}
-            >
-                <div style={{
-                    position: "relative",
-                    display: "block",
-                    overflow: "hidden",
-                    height: windowHeight,
-                    width: "100%",
-                    marginTop: "2rem",
-                    marginBottom: "2rem",
-                }}>
-                    {gallery?.map((item) => (
-                        <div
-                            key={item.id}
+            <div style={{
+                position: "relative",
+                display: "block",
+                overflow: "hidden",
+                height: windowHeight,
+                width: "100%",
+                marginTop: "2rem",
+                marginBottom: "2rem",
+            }}>
+                {gallery?.map((item) => (
+                    <div
+                        key={item.id}
+                        style={{
+                            position: "absolute",
+                            display: "block",
+                            top: `${item.top}px`,
+                            left: `${item.left}px`,
+                            width: `${item.width}px`,
+                            height: `${item.height}px`,
+                            overflow: "hidden",
+                            borderRadius: "0.25rem",
+                        }}
+                    >
+                        <Image
+                            src={item.src}
+                            alt={item.alt}
+                            width={item.width}
+                            height={item.height}
                             style={{
-                                position: "absolute",
-                                display: "block",
-                                top: `${item.top}px`,
-                                left: `${item.left}px`,
-                                width: `${item.width}px`,
-                                height: `${item.height}px`,
-                                overflow: "hidden",
-                                borderRadius: "0.25rem",
+                            objectFit: "cover",
+                            objectPosition: "center",
+                            width: "100%",
+                            height: "100%",
                             }}
-                        >
-                            <Image
-                                src={item.src}
-                                alt={item.alt}
-                                width={item.width}
-                                height={item.height}
-                                style={{
-                                objectFit: "cover",
-                                objectPosition: "center",
-                                width: "100%",
-                                height: "100%",
-                                }}
-                                loading="lazy" 
-                            />
-                        </div>
-                    ))}
-                </div>
-            </AppearanceAnimation>
+                            loading="lazy" 
+                        />
+                    </div>
+                ))}
+            </div>
         </Window>
     );
 }

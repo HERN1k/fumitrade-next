@@ -435,9 +435,9 @@
   
     .learnMoreContainer {
         gap: 1.5rem;
-        width: 50dvw;
-        height: 50dvw;
-        margin-top: 2rem;
+        width: 80dvw;
+        height: 80dvw;
+        margin-top: 5rem;
     }
     
     .learnMoreText {
@@ -556,7 +556,7 @@
     padding: 1rem;
     position: relative;
     margin-top: 2.5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
   }
   
   .countersTitle {
