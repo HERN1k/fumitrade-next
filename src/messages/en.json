@@ -1,0 +1,194 @@
+{
+    "appWrapper": {
+      "locales": {
+            "en": "English",
+            "uk": "Українська",
+            "ru": "Русский"
+        },
+      "lets_work_together": "Let's work together",
+      "our_location": "Our location",
+      "location": "Smila, Cherkasy region, 20705",
+      "call_us": "Call us",
+      "connect": "Connect",
+      "created_with_love_by": "Created with love by",
+      "privacy_policy": "Privacy Policy",
+      "documentTitles": {
+        "page_not_found": "Page not found",
+        "main": "Fumitrade",
+        "services": "Services",
+        "about_us": "About us",
+        "knowledge_base": "Knowledge base",
+        "contacts": "Contacts"
+      },
+      "menu": {
+        "services": "Services",
+        "about_us": "About us",
+        "knowledge_base": "Knowledge base",
+        "contacts": "Contacts",
+        "dropDown": {
+          "complex_processing": "Grain fumigation",
+          "aerosol_disinfestation": "Aerosol disinsection",
+          "rodent_traps": "Mill fumigation",
+          "disinfection_of_granaries": "Granary fumigation without transferring",
+          "fumigation_of_silos": "Rodent control"
+        }
+      },
+      "popupCookie": {
+        "question": "We use cookies 🍪. Do you agree to their use?",
+        "learnMore": "Learn more",
+        "accept": "Accept",
+        "reject": "Reject"
+      }
+    },
+    "pages_helmet": {
+      "page_not_found": {
+        "title": "Fumitrade | Page not found",
+        "description": "Page not found",
+        "keywords": "Page not found",
+        "openGraphType": "website",
+        "name": "Page not found"
+      },
+      "main": {
+        "title": "Fumitrade | Home",
+        "canonicalPath": "",
+        "description": "Professional pest control without compromise! Fumitrade – over 30 years of experience in pest control and fumigation of grains and oilseeds.",
+        "keywords": "Home, Main page",
+        "openGraphType": "website",
+        "name": "Professional pest control without compromise!"
+      },
+      "services": {
+        "title": "Fumitrade | Services",
+        "canonicalPath": "services",
+        "description": "Fumigation and disinsection services from Fumitrade. Grain protection, pest control, aerosol disinsection, fumigation of elevators, warehouses, wagons and containers.",
+        "keywords": "Services, Pest control services, Fumigation services",
+        "openGraphType": "website",
+        "name": "Fumigation and disinsection services from Fumitrade."
+      },
+      "about_us": {
+        "title": "Fumitrade | About us",
+        "canonicalPath": "about-us",
+        "description": "Fumitrade – experts in fumigation and pest control. Over 30 years of experience, safe and effective pest control methods in the agricultural sector.",
+        "keywords": "About us, we",
+        "openGraphType": "website",
+        "name": "Fumitrade – experts in fumigation and pest control."
+      },
+      "knowledge_base": {
+        "title": "Fumitrade | Knowledge base",
+        "canonicalPath": "knowledge-base",
+        "description": "Useful knowledge base on fumigation, disinsection and pest control. Expert advice, articles, and helpful information from Fumitrade.",
+        "keywords": "Knowledge base, data, knowledge",
+        "openGraphType": "website",
+        "name": "Useful knowledge base on fumigation, disinsection and pest control."
+      },
+      "contacts": {
+        "title": "Fumitrade | Contacts",
+        "canonicalPath": "contacts",
+        "description": "Get in touch with Fumitrade! We’ll help you with fumigation and pest control. Address, phone, email – all contact info in one place.",
+        "keywords": "Contacts, location, phone number, map",
+        "openGraphType": "website",
+        "name": "Get in touch with Fumitrade!"
+      }
+    },
+    "notFoundWindow": {
+      "page_not_found": "Oops! Page not found",
+      "you_may_have_entered_the_wrong_address": "You may have entered the wrong address",
+      "or_the_page_has_been_moved": "or the page has been moved.",
+      "to_the_main_page": "To the homepage"
+    },
+    "mainWindow": {
+      "typedStrings": {
+        "fumigation_without_compromise": "Pest control without<br />compromise",
+        "30 years_on_the_market": "30 years on the market",
+        "experience_reliability_efficiency": "Experience<br />Reliability<br />Efficiency"
+      },
+      "about": {
+        "professional_fumigation": "Grain fumigation in silos\nwithout transferring",
+        "fumigation_of_granaries": "Grain\nfumigation",
+        "aerosol_disinsection": "Aerosol\ndisinsection",
+        "pest_control": "Rodent control"
+      }
+    },
+    "descriptionWindow": {
+      "title": "At FUMITRADE, we are not just fumigation experts – we are paving the way in agricultural protection",
+      "text": "We have over 30 years of experience, becoming leaders in fumigation and processing of grain and oilseed crops. Safety, efficiency, and innovation have always been at the heart of our work, and we continue to raise industry standards.",
+      "button": "Learn\nmore"
+    },
+    "servicesWindowInMainPage": {
+      "title": "Popular services",
+      "swiperLastItemDescription": "Want to see more?",
+      "swiperLastItemTitle": "All services"
+    },
+    "trustUsWindow": {
+      "we_are_trusted_title_1": "Leading agricultural and industrial companies trust us\nacross",
+      "we_are_trusted_title_2": " all of Ukraine ",
+      "we_are_trusted_title_3": "and beyond",
+      "we_are_trusted_text": "We take on both large and small projects, providing efficiency and reliability others cannot offer"
+    },
+    "countersWindow": {
+      "we_are_in_numbers": "Our efficiency in numbers",
+      "we_have_processed": "We processed in 2024",
+      "regular_customers": "Regular customers",
+      "percentage_of_successful_treatments": "Successful treatments",
+      "years_on_the_market": "Years on the market",
+      "eco_friendly_solutions": "Eco-friendly solutions",
+      "percentage_of_satisfied_customers": "Satisfied customers"
+    },
+    "servicesWindow": {
+      "reliable_solutions_for_your_business": "Reliable solutions for your business",
+      "we_offer_comprehensive_pest_control_solutions": "We offer comprehensive pest control solutions. Choose the service you need:",
+      "modal": {
+        "order": "Request a\nconsultation",
+        "swalSuccessTitle": "Link copied",
+        "swalErrorTitle": "Link not copied"
+      },
+      "services": {
+        "service_1": {
+          "title": "Grain fumigation",
+          "description": "Treatment of grain with phosphine gas applied in tablet form into the grain mass.\tRequires sealing of the grain mass on-floor elevators with film."
+        },
+        "service_2": {
+          "title": "Aerosol disinsection",
+          "description": "Aerosol disinsection, also known as fogging, is used to treat empty premises before loading a new crop. The principle involves fine spraying of liquid insecticide using:\tHot fog generators (with light oil)\tAirflow atomizers (with water)"
+        },
+        "service_3": {
+          "title": "Mill fumigation",
+          "description": "Fumigation of mills allows for the effective destruction of pests in dust or in mill structures. The procedure is carried out using gas fumigants, which ensures the penetration of the drug into hard-to-reach places. Fumigation is carried out in sealed conditions with subsequent control of gas concentration and degassing before using the premises.\tThe consumption rate of the phosphine drug is from 4 g/m³\tThe exposure time is up to 10 days"
+        },
+        "service_4": {
+            "title": "Grain\tfumigation\twithout\ttransfer",
+            "description": "The technology of grain fumigation in silos without transfer (movement) was developed by us based on thirty years of experience in the field of fumigation. Before the war, it underwent two years of testing at the following elevators: Kherson KHP, Bratolyubov KHP, Agrotrade 2000 and Zlynkiv new elevator.\tWe guarantee 100% quality of work!"
+        },
+        "service_5": {
+            "title": "Deratization",
+            "description": "We carry out deratization activities in accordance with HACCP standards, installing deratization stations of our own design, which differ from similar ones in the period between maintenance. Traps are installed in places of rodent activity, and their location is monitored and adjusted for maximum effect. Advantages of our company's traps:\tQuick installation\tSmall size\tThe period between maintenance is 1 month"
+        }
+      }
+    },
+    "contactsPage": {
+    "mainTitle": "Write to us and we will find a solution to your problems!",
+    "contactForm": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "company": "Company",
+      "email": "Email",
+      "message": "Message",
+      "error": "This field is required",
+      "errorEmailPattern": "Invalid email address",
+      "submit": "Submit"
+    },
+    "modal": {
+      "swalSuccessTitle": "Message sent successfully",
+      "swalErrorTitle": "Message not sent"
+    }
+  },
+  "knowledge_base_page": {
+    "title": "Knowledge Base"
+  },
+  "about-us": {
+    "title": "We’re not just<br>fumigation experts",
+    "text": "<span class=\"span-uppercase span-font-weight-bold span-color-secondary\">We’re paving the way in crop protection!</span><br><br>With over 30 years of experience, we’ve become leaders in fumigation and treatment of grain and oilseed crops. Safety, efficiency, and innovation have always been at the core of our work, and we continue to raise industry standards by ensuring the highest quality.<br><br>We take on both large and small projects, delivering effectiveness and reliability that others can’t match.",
+    "founderName": "Dmytro Usenko",
+    "founderTitle": "Top Employee",
+    "quote": "Our mission is to provide a full range of pest control services to minimize business losses.<br><br>And to do it according to international standards using the latest methods."
+  }
+}

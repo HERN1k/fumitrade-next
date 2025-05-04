@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fumitrade.com.ua/sitemap.xml

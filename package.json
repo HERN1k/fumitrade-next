@@ -4,22 +4,43 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "npm run generate-sitemap && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preview": "npx serve@latest out",
+    "generate-sitemap": "ts-node src/scripts/generateSitemap.js"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.3.1"
+    "@emailjs/browser": "^4.4.1",
+    "@next/third-parties": "^15.3.1",
+    "@react-spring/web": "^9.7.5",
+    "flickr-justified-gallery": "^2.2.0",
+    "justified-layout": "^4.1.0",
+    "lightgallery": "^2.8.3",
+    "motion": "^12.9.4",
+    "next": "15.3.1",
+    "next-intl": "^4.1.0",
+    "next-translate": "^2.6.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.56.1",
+    "react-intersection-observer": "^9.16.0",
+    "recharts": "^2.15.3",
+    "sitemap": "^8.0.0",
+    "sweetalert2": "^11.19.1",
+    "sweetalert2-react-content": "^5.1.0",
+    "swiper": "^11.2.6",
+    "ts-node": "^10.9.2",
+    "typed.js": "^2.1.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@types/justified-layout": "^4.1.4",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
-    "@eslint/eslintrc": "^3"
+    "typescript": "^5"
   }
 }
