@@ -170,7 +170,7 @@
         },
         "service_6": { 
             "title": "Fumigation of organic products",
-            "description": "Scientists of our company, with the full support of the «NGO Organic Ukraine», have developed a technology for environmentally friendly disinfection of grain, grain products and agricultural cargo in the holds of sea vessels, sea containers and big bags. You can get detailed information in this <a href=\"/static/services/organic-presentation.pdf\" class=\"a-service-link\">presentation</a>.\tOur own invention\tWe guarantee 100% quality of work!"
+            "description": "Scientists of our company, with the full support of the «NGO Organic Ukraine», have developed a technology for environmentally friendly disinfection of grain, grain products and agricultural cargo in the holds of sea vessels, sea containers and big bags. You can get detailed information in this <a href=\"/static/services/organic-presentation.pdf\" target=\"_blank\" class=\"a-service-link\">presentation</a>.\tOur own invention\tWe guarantee 100% quality of work!"
         }
       }
     },
