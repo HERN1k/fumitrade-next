@@ -177,7 +177,7 @@ export const onResizeForTrustUsWindow = (
 export const halfArray = <T>(arr: T[]): T[] => arr.slice(0, Math.floor(arr.length / 2));
 
 export const lockServicesWindowScroll = ({ root, swiper }: IChangeServicesWindowScrollProps) => {
-    if (window.innerWidth < 900) return;
+    if (window.innerWidth < 1024) return;
     
     setTimeout(() => {
         if (root.current && swiper.current) {
@@ -201,7 +201,7 @@ export const lockServicesWindowScroll = ({ root, swiper }: IChangeServicesWindow
 }
 
 export const unlockServicesWindowScroll = ({ root, swiper }: IChangeServicesWindowScrollProps) => {
-    if (window.innerWidth < 900) return;
+    if (window.innerWidth < 1024) return;
 
     if (root.current && swiper.current) {
         swiper.current.swiper.disable();

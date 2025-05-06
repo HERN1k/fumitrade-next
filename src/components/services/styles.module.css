@@ -99,7 +99,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .headerContainer {
         height: 32rem;
         margin: 0;
@@ -147,21 +147,18 @@
     max-width: 70dvw;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    align-items: stretch;
 }
 
-@media (max-width: 1440px) {
-    .servicesContent {
-        margin-top: 24rem;
-    }
-
+@media (min-width: 1025px) and (max-width: 1500px) {
     .servicesContainer {
         grid-template-columns: 1fr;
-        margin-top: 1rem;
-        max-width: 75dvw;
+        margin-top: 0;
+        max-width: 80dvw;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .servicesContent {
         margin-top: 32rem;
     }
@@ -175,6 +172,7 @@
 
 .serviceContainer {
     width: 100%;
+    height: 100%;
     overflow: hidden;
     border-radius: 0.5rem;
     background-repeat: no-repeat; 
@@ -183,20 +181,20 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
     padding: 8rem 6rem 4rem 6rem;
     cursor: pointer;
     transition: all 0.25s ease-in;
     scroll-margin-top: 5px;
     overflow: hidden;
+    flex: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .serviceContainer {
         padding: 3rem 3rem;
         border-radius: 0.8rem;
-        
     }
 }
 
@@ -216,7 +214,7 @@
     border-radius: 0.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .serviceFogging {
         border-radius: 0.8rem;
     }
@@ -270,13 +268,7 @@
     background-color: var(--color-secondary);
 }
 
-@media (max-width: 1440px) {
-    .serviceText {
-        width: 50%;
-    }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .serviceTitle {
         font-size: 2rem;
         line-height: 2.5rem;
@@ -332,7 +324,7 @@
     fill: var(--color-primary);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .serviceButton {
         height: 4rem;
         width: 4rem;
@@ -358,7 +350,7 @@
     align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .modalBackdrop {
         background-color: rgba(0, 0, 0, 0.66);
     }
@@ -418,7 +410,7 @@
     font-weight: 300;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .modalLinkContainer {
         margin-top: 2rem;
     }
@@ -444,7 +436,7 @@
     transition: all 0.25s linear;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .modalContainer {
         width: calc(100% - 2rem);
         flex-direction: column;
@@ -508,7 +500,7 @@
     position: relative;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .modalImage {
         width: 100%;
         height: auto;
@@ -587,7 +579,7 @@
     text-align: left;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .modalCompanyName {
         font-size: 2rem;
         line-height: 2rem;
@@ -644,7 +636,7 @@
     left: 5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .modalDescriptionItem {
         padding-left: 5rem;
     }
@@ -701,7 +693,7 @@
     border-radius: 50%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .modalContactContainer {
         gap: 1rem;
     }

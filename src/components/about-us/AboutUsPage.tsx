@@ -1,7 +1,6 @@
 "use client";
 
 import AboutUsBestEmployee from "@/components/about-us/AboutUsBestEmployee";
-import AboutUsGallery from "@/components/about-us/AboutUsGallery";
 import AboutUsText from "@/components/about-us/AboutUsText";
 import ScrollIndicator from "@/components/general/ScrollIndicator/ScrollIndicator";
 import Constants from "@/constants";
@@ -17,7 +16,7 @@ export default function AboutUsPage() {
           loader.style.opacity = "0";
         }
 
-        Header.ensureVisible();
+        Header.ensureVisible(); 
 
         setTimeout(() => {
           if (!loader) return;
@@ -33,8 +32,6 @@ export default function AboutUsPage() {
             <AboutUsText />
 
             <AboutUsBestEmployee />
-
-            <AboutUsGallery />
         </div>
     );
 }

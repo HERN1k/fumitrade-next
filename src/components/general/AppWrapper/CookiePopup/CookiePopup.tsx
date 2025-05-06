@@ -1,7 +1,9 @@
+"use client";
+
 import { FC, MouseEvent, useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import PopupBackdrop from "@/components/general/PopupBackdrop/PopupBackdrop";
-import { getPrivacyPolicyUrl, removeNewLineIfMobile } from "@/scripts/appWrapperScripts";
+import { getPrivacyPolicyUrl } from "@/scripts/appWrapperScripts";
 import Constants from "@/constants";
 import { useTranslations } from "next-intl";
 import styles from "@/components/general/PopupBackdrop/styles.module.css";
@@ -14,7 +16,8 @@ const CookiePopup: FC = () => {
 
     const open = (): void => {
         setTimeout(() => { 
-            if (!localStorage.getItem(Constants.COOKIES_ACCEPT_KEY)) {
+            var key = localStorage.getItem(Constants.COOKIES_ACCEPT_KEY);
+            if (key === null || key === "undefined") {
                 setPopupOpen(true);
             }
         }, 1000);
@@ -47,15 +50,19 @@ const CookiePopup: FC = () => {
             {popupOpen && 
                 <PopupBackdrop onClick={reject}>
                     <div className={styles.popupContainer} onClick={stopPropagation}>
-                        <p className={styles.question}>
-                            {t("appWrapper.popupCookie.question")}
-                        </p>
+                        <p className={styles.question} 
+                            dangerouslySetInnerHTML={{ 
+                                __html: t("appWrapper.popupCookie.question")
+                            }}
+                        />
  
                         <div className={styles.interesticContainer}>
                             <a className={styles.learnMore} href={getPrivacyPolicyUrl()} target="_blank">
-                                <p className={styles.learnMoreText}>
-                                    {removeNewLineIfMobile(t("appWrapper.popupCookie.learnMore"))}
-                                </p>
+                                <p className={styles.learnMoreText} 
+                                    dangerouslySetInnerHTML={{ 
+                                        __html: t("appWrapper.popupCookie.learnMore")
+                                    }}
+                                />
                                 
                                 <span className={styles.learnMoreSpan}>
                                     &gt;

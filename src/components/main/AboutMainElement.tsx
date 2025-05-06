@@ -21,7 +21,7 @@ const AboutMainElement: FC = () => {
     const isPC = (): boolean => {
         if (typeof window === "undefined") return true;
 
-        return window.innerWidth > 768;
+        return window.innerWidth > 1024;
     }
     
     return (

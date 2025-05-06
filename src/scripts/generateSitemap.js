@@ -2,7 +2,7 @@ import { SitemapStream, streamToPromise } from "sitemap";
 import { createWriteStream } from "fs";
 import { resolve } from "path";
 
-const locales = ["ru", "en", "uk"];
+const locales = ["en", "uk"];
 const baseUrl = "https://fumitrade.com.ua";
 
 const staticRoutes = ["", "about-us", "services", "contact", "knowledge-base"];
@@ -24,7 +24,9 @@ async function generateSitemap() {
   sitemapStream.end();
 
   await streamToPromise(sitemapStream);
-  console.log("✅ sitemap.xml created in /public");
+
+  console.log(" \x1b[1m\x1b[92m✓\x1b[0m File sitemap.xml created in '/public' directory");
+  console.log("");
 }
 
 generateSitemap().catch(console.error);

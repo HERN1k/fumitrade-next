@@ -51,7 +51,7 @@
   object-fit: cover;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .mainVideoBGContainer {
       height: 80dvh;
   }
@@ -121,7 +121,7 @@
   color: var(--color-secondary);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .aboutTextTitle:hover {
       color: var(--color-text);
   }
@@ -397,7 +397,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .descriptionContainer {
       flex-direction: column;
       gap: 2rem;
@@ -462,7 +462,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .mainPageImage {
       height: 80dvh;
       background-repeat: no-repeat; 
@@ -623,7 +623,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .countersTitle {
       font-size: 2rem;
       margin-bottom: 3rem;
@@ -741,7 +741,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .trustUsTitle {
       font-weight: 800;
       font-size: 2rem;
@@ -813,7 +813,7 @@
   text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .servicesTitle {
       font-size: 2rem;
       letter-spacing: 1px;

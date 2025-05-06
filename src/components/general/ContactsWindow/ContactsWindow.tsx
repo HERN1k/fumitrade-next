@@ -46,16 +46,58 @@ const ContactsWindow: FC<IContactsWindowProps> = ({ sticky = true }) => {
 
                     <div className={styles.contactConatiner}>
                         <h3 className={styles.contactTitle}>
-                            {t("appWrapper.call_us")}
+                            {t("appWrapper.representatives_in_ukraine")}
                         </h3>
-                        <div>
+                        <div className={styles.numbersContainer}>
+                            <div>
+                                <h2 className={styles.contactText}>{t("appWrapper.north")}</h2>
+                                <h2 className={styles.contactText}>{t("appWrapper.central")}</h2>
+                                <h2 className={styles.contactText}>{t("appWrapper.west")}</h2>
+                                <h2 className={styles.contactText}>{t("appWrapper.south")}</h2>
+                            </div>
+                            <div>
+                                <a
+                                    className={styles.contactAnchor} 
+                                    style={{ whiteSpace: "nowrap" }}
+                                    target="_blank" 
+                                    href={formattingPhoneNumber(Constants.COMPANY_FIRST_PHONE_NUMBER)}
+                                >
+                                    {Constants.COMPANY_FIRST_PHONE_NUMBER}
+                                </a>
+                                <a
+                                    className={styles.contactAnchor} 
+                                    style={{ whiteSpace: "nowrap" }}
+                                    target="_blank" 
+                                    href={formattingPhoneNumber(Constants.COMPANY_SECOND_PHONE_NUMBER)}
+                                >
+                                    {Constants.COMPANY_SECOND_PHONE_NUMBER}
+                                </a>
+                                <a
+                                    className={styles.contactAnchor} 
+                                    style={{ whiteSpace: "nowrap" }}
+                                    target="_blank" 
+                                    href={formattingPhoneNumber(Constants.COMPANY_THIRD_PHONE_NUMBER)}
+                                >
+                                    {Constants.COMPANY_THIRD_PHONE_NUMBER}
+                                </a>
+                                <a
+                                    className={styles.contactAnchor} 
+                                    style={{ whiteSpace: "nowrap" }}
+                                    target="_blank" 
+                                    href={formattingPhoneNumber(Constants.COMPANY_FOURTH_PHONE_NUMBER)}
+                                >
+                                    {Constants.COMPANY_FOURTH_PHONE_NUMBER}
+                                </a>
+                            </div>
+                        </div>
+                        {/* <div>
                             <a className={styles.contactAnchor} target="_blank" href={formattingPhoneNumber(Constants.COMPANY_FIRST_PHONE_NUMBER)}>
                                 <h2 className={styles.contactText}>{Constants.COMPANY_FIRST_PHONE_NUMBER}</h2>
                             </a>
                             <a className={styles.contactAnchor} target="_blank" href={formattingPhoneNumber(Constants.COMPANY_SECOND_PHONE_NUMBER)}>
                                 <h2 className={styles.contactText}>{Constants.COMPANY_SECOND_PHONE_NUMBER}</h2>
                             </a>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </AppearanceAnimation>

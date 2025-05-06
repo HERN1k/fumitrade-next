@@ -43,7 +43,8 @@ export const getServicesCollectionForHeader = (t: TFunction): string[] => {
         t("servicesWindow.services.service_2.title"),
         t("servicesWindow.services.service_3.title"),
         t("servicesWindow.services.service_4.title"),
-        t("servicesWindow.services.service_5.title")
+        t("servicesWindow.services.service_5.title"),
+        t("servicesWindow.services.service_6.title")
     ];
 }
 

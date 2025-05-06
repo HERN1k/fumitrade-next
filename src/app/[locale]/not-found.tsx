@@ -1,9 +1,12 @@
+"use client";
+
 import Constants from "@/constants";
 import Window from "@/components/general/Window/Window";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { Montserrat } from "next/font/google";
 import "../globals.css";
+import { useEffect } from "react";
 
 const montserrat = Montserrat({
     variable: "--font-geist-sans",
@@ -13,6 +16,20 @@ const montserrat = Montserrat({
 export default function NotFound() {
 
     const t = useTranslations();
+
+    useEffect(() => { 
+        var loader = document.getElementById(Constants.GENERAL_LOADING_ID);
+            
+        if (loader) {
+            loader.style.opacity = "0";
+        }
+
+        setTimeout(() => {
+            if (!loader) return;
+    
+            loader.style.display = "none";
+        }, 300);
+    }, []);
 
     return (
         <Window id={Constants.NOT_FOUND_PAGE_ID}>

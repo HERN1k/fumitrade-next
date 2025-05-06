@@ -9,11 +9,11 @@ import withReactContent from "sweetalert2-react-content";
 export const getStaticFile = (name: string) => Constants.STATIC_FILES_PATH + name;
 
 export const addLineBreaks = (str: string) => {
-    var result = str.replace(/ /g, "\n");
+    var result = str;
 
     result = result.length > 0 ? result.replace(/\t/g, " ") : "Null";
  
-    return result.length > 24 ? result : result + "\nㅤ";
+    return result;
 };
 
 export const createHashLink = (str: string) => {
@@ -87,7 +87,7 @@ export const parseServiceDescription = (args: IParseServiceDescriptionProps) => 
 }
 
 export const onResizeModal = (setDisplayPropery: Dispatch<SetStateAction<string>>) => {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 1024) {
         setDisplayPropery("flex");
     } else {
         setDisplayPropery("none");

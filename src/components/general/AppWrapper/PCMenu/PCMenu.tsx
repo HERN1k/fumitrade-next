@@ -46,6 +46,9 @@ const PCMenu: FC = () => {
                     <Link href={`/services${createHashLink(servicesItemsCollection[4])}`}>
                         <div className={styles.menuItemDropDownItem}>{trimWithDots(t("appWrapper.menu.dropDown.fumigation_of_silos"), 28)}</div>
                     </Link>
+                    <Link href={`/services${createHashLink(servicesItemsCollection[5])}`}>
+                        <div className={styles.menuItemDropDownItem}>{trimWithDots(t("appWrapper.menu.dropDown.fumigation_of_organic_products"), 28)}</div>
+                    </Link>
                 </div>
             </li>
             <li className={styles.menuItem}>

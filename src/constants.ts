@@ -3,14 +3,16 @@ import { TranslateOnAxis } from "./scripts/translateOnAxis";
 export default class Constants {
     /*     General     */ 
     static readonly GA_TAG: string = "G-1FSK2NYLH9";
-    static readonly LOCALES: string[] = ["uk", "en", "ru"];
+    static readonly LOCALES: string[] = ["uk", "en"];
     static readonly USER_LOCALE_KEY: string = ":USER_LOCALE_KEY:";
     static readonly BASE_URL: string = "https://fumitrade.com.ua"
     static readonly BASE_URL_UNDER_PATH: string = "/"
-    static readonly COMPANY_NAME: string = "Fumitrade";
+    static readonly COMPANY_NAME: string = "Fumitrade ™";
     static readonly COMPANY_EMAIL: string = "fumitrade.ua@gmail.com";
-    static readonly COMPANY_FIRST_PHONE_NUMBER: string = "+38 (050) 606-26-15";
-    static readonly COMPANY_SECOND_PHONE_NUMBER: string = "+38 (067) 911-13-17";
+    static readonly COMPANY_FIRST_PHONE_NUMBER: string = "+38 (099) 160-17-79";
+    static readonly COMPANY_SECOND_PHONE_NUMBER: string = "+38 (050) 606-26-15";
+    static readonly COMPANY_THIRD_PHONE_NUMBER: string = "+38 (063) 570-58-02";
+    static readonly COMPANY_FOURTH_PHONE_NUMBER: string = "+38 (067) 911-13-17";
     static readonly COUNTRY_CODE: string = "UA";
     static readonly COUNTRY_LOCATION: string = "Україна";
     static readonly CITY_LOCATION: string = "Сміла";
@@ -78,6 +80,7 @@ export default class Constants {
     static readonly SERVICES_PAGE_SERVICE_3_IMAGE: string = "services/service_3.webp";
     static readonly SERVICES_PAGE_SERVICE_4_IMAGE: string = "services/service_4.webp";
     static readonly SERVICES_PAGE_SERVICE_5_IMAGE: string = "services/service_8.webp";
+    static readonly SERVICES_PAGE_SERVICE_6_IMAGE: string = "services/service_9.webp";
 
     /*     Knowledge base page images     */
     static readonly KNOWLEDGE_BASE_PAGE_BG_IMAGE: string = "knowledge-base/library.webp";
@@ -111,6 +114,7 @@ export default class Constants {
     static readonly SERVICES_PAGE_SERVICE_3_ID: string = ":SERVICES_PAGE_SERVICE_3_ID:";
     static readonly SERVICES_PAGE_SERVICE_4_ID: string = ":SERVICES_PAGE_SERVICE_4_ID:";
     static readonly SERVICES_PAGE_SERVICE_5_ID: string = ":SERVICES_PAGE_SERVICE_5_ID:";
+    static readonly SERVICES_PAGE_SERVICE_6_ID: string = ":SERVICES_PAGE_SERVICE_6_ID:";
     static readonly ABOUT_US_PAGE_MAIN_ID: string = ":ABOUT_US_PAGE_MAIN_ID:";
     static readonly ABOUT_US_PAGE_BEST_EMPLOYEE_ID: string = ":ABOUT_US_PAGE_BEST_EMPLOYEE_ID:";
     static readonly ABOUT_US_PAGE_GALLERY_ID: string = ":ABOUT_US_PAGE_GALLERY_ID:";

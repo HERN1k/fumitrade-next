@@ -13,7 +13,7 @@ export const onResize = (args: IAppWrapperOnResizeArgs) => {
 
     if (!headerElement) return;
 
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 1024) {
         args.setMenu(() => PCMenu);
 
         if (headerElement.classList.contains(styles.headerMobile)) {
@@ -35,7 +35,7 @@ export const trimWithDots = (str: string, maxLength: number) => {
 };
  
 export const removeNewLineIfMobile = (text: string): string => {
-    if (window.innerWidth > 768) return text;
+    if (window.innerWidth > 1024) return text;
 
     return text.replace(/\n/g, " ");
 }
@@ -105,7 +105,7 @@ export const toggleMobileMenu: () => void = () => {
     }
 }
 
-export const onResizeFooter = (setHyphen: Dispatch<SetStateAction<string>>) => window.innerWidth > 1440 ? setHyphen("一一") : setHyphen("\n");
+export const onResizeFooter = (setHyphen: Dispatch<SetStateAction<string>>) => window.innerWidth > 1500 ? setHyphen("一一") : setHyphen("\n");
 
 const scrollToElement = (element: HTMLElement | null, block: ScrollLogicalPosition | undefined = "center"): Promise<void> => {
     return new Promise((resolve, reject) => {

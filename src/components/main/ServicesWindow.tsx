@@ -13,7 +13,7 @@ import { getServicesCollectionForMainPage } from "@/scripts/collections";
 import { useTranslations } from "next-intl";
 import Window from "@/components/general/Window/Window";
 import { TranslateOnAxis } from "@/scripts/translateOnAxis";
-
+ 
 const ServicesWindow: FC = () => {
 
     const rootElementRef = useRef<HTMLDivElement | null>(null);
@@ -37,7 +37,7 @@ const ServicesWindow: FC = () => {
                 return;
             }
 
-            if (window.innerWidth > 900) {
+            if (window.innerWidth > 1024) {
                 setSpaceBetween(50);
                 setSwiperSlideWidth("25dvw");
             } else {
@@ -56,7 +56,7 @@ const ServicesWindow: FC = () => {
     const isPC = (): boolean => {
         if (typeof window === "undefined") return true;
 
-        return window.innerWidth > 768;
+        return window.innerWidth > 1024;
     }
 
     return (
@@ -97,9 +97,12 @@ const ServicesWindow: FC = () => {
                                     {trimWithDots(item.description, 25)}
                                 </p>
 
-                                <h3 className={styles.servicesSwiperItemTitle}>
-                                    {addLineBreaks(item.title)}
-                                </h3>
+                                <h3 
+                                    className={styles.servicesSwiperItemTitle}
+                                    dangerouslySetInnerHTML={{
+                                        __html: addLineBreaks(item.title)
+                                    }}
+                                />
 
                                 <div className={styles.serviceSwiperItemButton}>
                                     <Arrow className={styles.serviceSwiperItemButtonArrowSvg} />

@@ -59,14 +59,7 @@
     align-items: center;
 }
 
-@media (max-width: 1440px) and (min-width: 769px) {
-    .mainContainer {
-        margin-top: 12.5rem;
-        padding: 0;
-    }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .mainContainer {
         flex-direction: column;
         margin-top: 15rem;
@@ -134,7 +127,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .title {
         font-size: 3.25rem;
         line-height: 3.5rem;
@@ -253,7 +246,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .quoteContainer {
         width: 85dvw;
     }

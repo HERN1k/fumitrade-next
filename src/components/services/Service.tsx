@@ -16,7 +16,7 @@ const Service: FC<IServiceProps> = (args) => {
     const isPC = (): boolean => {
         if (typeof window === "undefined") return true;
 
-        return window.innerWidth > 768;
+        return window.innerWidth > 1024;
     }
 
     const [isMobile, setIsMobile] = useState<boolean>(() => isPC() ? false : true);
@@ -90,6 +90,7 @@ const Service: FC<IServiceProps> = (args) => {
                         ...fadeInAnimation, 
                         transform: isMobile ? "" : xys.to(trans),
                         willChange: isMobile ? "" : "transform",
+                        height: "100%",
                     }}
                     onMouseLeave={handleMouseLeave}
                     onMouseMove={handleMouseMove}>
@@ -105,9 +106,11 @@ const Service: FC<IServiceProps> = (args) => {
                         <p className={styles.serviceText}>
                             {trimWithDots(args.description, 25)}
                         </p>
-                        <h1 className={styles.serviceTitle}>
-                            {addLineBreaks(args.title)}
-                        </h1> 
+                        <h1 className={styles.serviceTitle}
+                            dangerouslySetInnerHTML={{
+                                __html: addLineBreaks(args.title)
+                            }}
+                        />
                         <div className={styles.serviceButton}>
                             <Arrow className={styles.serviceButtonArrowSvg} />
                         </div>

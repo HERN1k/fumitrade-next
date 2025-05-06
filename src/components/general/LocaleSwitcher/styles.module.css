@@ -3,7 +3,6 @@
     outline: 10px red;
     border: 0;
     box-shadow: none;
-    /* Personalize */
     flex: 1;
     padding: 0 1rem;
     color: var(--color-text);

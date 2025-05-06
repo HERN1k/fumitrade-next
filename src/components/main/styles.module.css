@@ -51,7 +51,7 @@
     object-fit: cover;
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .mainVideoBGContainer {
         height: 80dvh;
     }
@@ -121,7 +121,7 @@
     color: var(--color-secondary);
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .aboutTextTitle:hover {
         color: var(--color-text);
     }
@@ -162,16 +162,6 @@
     transition: all 0.5s ease-in;
     position: relative;
     color: var(--color-text);
-  }
-  
-  @media (max-width: 1440px) and (min-width: 769px) {
-    .aboutTextTitle {
-        font-size: 1.75rem;
-    }
-    
-    .aboutTextItemText {
-        font-size: 1.05rem;
-    }
   }
   
   .aboutTextItemText:hover {
@@ -353,52 +343,21 @@
     color: var(--color-secondary);
   }
   
-  @media (max-width: 1440px) and (min-width: 769px) {
-    .sloganText {
-        font-size: 2.75rem;
-        line-height: 4rem;
-        width: 900%;
-        top: 45dvh;
-        font-weight: 200;
-    }
-  
-    .aboutTextContainer {
-        height: 7.5rem;
-    }
-  
-    .aboutTextTitle {
-        font-size: 1.25rem;
-    }
-  
-    .descriptionTitle {
-        font-size: 2rem;
-        line-height: 2.5rem;
-        width: 45dvw; 
-    }
-  
-    .descriptionText {
-        font-size: 1.25rem;
-        line-height: 1.75rem;
-        width: 40dvw;
-        text-align: center;
-    }
-  
+  @media (max-width: 1024px) and (min-width: 769px) {
     .learnMoreContainer {
-        width: 25dvw;
-        height: 25dvw;
+      width: 40dvw;
+      height: 40dvw;
     }
-  
-    .learnMoreText {
-        font-size: 1rem;
-    }
-    
-    .learnMoreButton {
-        height: 5rem;
-        width: 5rem;
+  }
+
+  @media (max-width: 768px) {
+    .learnMoreContainer {
+      width: 80dvw;
+      height: 80dvw;
     }
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .descriptionContainer {
         flex-direction: column;
         gap: 2rem;
@@ -435,8 +394,6 @@
   
     .learnMoreContainer {
         gap: 1.5rem;
-        width: 80dvw;
-        height: 80dvw;
         margin-top: 5rem;
     }
     
@@ -463,7 +420,7 @@
     }
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .mainPageImage {
         height: 80dvh;
         background-repeat: no-repeat; 
@@ -617,14 +574,7 @@
     text-align: center;
   }
   
-  @media (max-width: 1440px) and (min-width: 769px) {
-    .countersTitle {
-        font-size: 2rem;
-        margin-bottom: 3rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .countersTitle {
         font-size: 2rem;
         margin-bottom: 3rem;
@@ -737,14 +687,7 @@
     object-fit: contain;
   }
   
-  @media (max-width: 1440px) and (min-width: 769px) {
-    .trustUsTitle {
-        font-size: 2.75rem;
-        line-height: 3rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .trustUsTitle {
         font-weight: 800;
         font-size: 2rem;
@@ -816,7 +759,7 @@
     text-transform: uppercase;
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .servicesTitle {
         font-size: 2rem;
         letter-spacing: 1px;
@@ -830,7 +773,7 @@
     overflow: visible !important; 
   }
   
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
     .servicesSwiper {
         height: 60dvh;
     }
@@ -854,13 +797,14 @@
     padding: 10% 5% 10% 10%;
     will-change: transform;
     backface-visibility: hidden;
+    flex-shrink: 0;
   }
   
   .servicesSwiperItem:hover {
     transform: scale(1.02);
   }
   
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
     .servicesSwiperItem {
         height: 60dvh;
     }
@@ -883,6 +827,7 @@
     border-radius: 50%;
     z-index: 3;
     background-color: transparent;
+    flex-shrink: 0;
   }
   
   .servicesSwiperItem:hover .serviceSwiperItemButton {
@@ -899,7 +844,7 @@
     fill: var(--color-primary);
   }
   
-  @media (min-width: 900px) and (max-width: 1440px) {
+  @media (max-width: 1024px) {
     .serviceSwiperItemButton {
         height: 4rem;
         width: 4rem;
@@ -908,18 +853,6 @@
     .serviceSwiperItemButtonArrowSvg {
         height: 1.25rem;
         width: 1.25rem;
-    }
-  }
-  
-  @media (max-width: 900px) {
-    .serviceSwiperItemButton {
-        height: 5rem;
-        width: 5rem;
-    }
-  
-    .serviceSwiperItemButtonArrowSvg {
-        height: 1.5rem;
-        width: 1.5rem;
     }
   
     .servicesSwiperItem:hover .serviceSwiperItemButton {
@@ -962,7 +895,7 @@
     background: rgba(0, 0, 0, 0.1);
   }
   
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
     .servicesSwiperItem:hover::before {
         transform: none;
         transition: all 0s none;
@@ -987,7 +920,7 @@
     font-weight: 500;
     font-size: 1.25rem;
     color: var(--color-secondary);
-    line-height: 1.25rem;
+    line-height: 1.5rem;
     margin-bottom: 1rem;
     text-align: left;
     text-transform: uppercase;
@@ -1012,10 +945,10 @@
     width: 100%;
     font-family: "Montserrat", serif;
     font-weight: 800;
-    font-size: 3rem;
+    font-size: 2.25rem;
     color: white;
     letter-spacing: 1px;
-    line-height: 3.25rem;
+    line-height: 2.75rem;
     margin-bottom: 2rem;
     text-align: left;
     text-transform: uppercase;
@@ -1023,9 +956,9 @@
     white-space: pre-line;
   }
   
-  @media (min-width: 900px) and (max-width: 1440px) {
+  @media (max-width: 1024px) {
     .servicesSwiperItemDescription {
-        font-size: 1rem;
+        font-size: 1.1rem;
         line-height: 1.25rem;
     }
   
@@ -1045,6 +978,7 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
+    flex-shrink: 0;
     border-radius: 1rem;
     padding: 10% 5% 10% 10%;
     transition: all 0.25s ease-in-out;
@@ -1054,7 +988,7 @@
     transform: scale(1.02);
   }
   
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
     .servicesSwiperLastItem {
         margin-top: 10dvh;
         height: 50dvh;
@@ -1123,19 +1057,7 @@
     color: white;
   }
   
-  @media (min-width: 900px) and (max-width: 1440px) {
-    .servicesSwiperLastItemDescription {
-        font-size: 1rem;
-        line-height: 1.25rem;
-    }
-  
-    .servicesSwiperLastItemTitle {
-        font-size: 2rem;
-        line-height: 2.25rem;
-    }
-  }
-  
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
     .servicesSwiperLastItem:hover .servicesSwiperLastItemDescription::before {
         border-top: solid 1px var(--color-primary);
     }
@@ -1155,6 +1077,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-shrink: 0;
     align-items: center;
     height: 5rem;
     width: 5rem;
@@ -1174,7 +1097,7 @@
     transition: all 0.25s ease-in;
   }
   
-  @media (min-width: 900px) and (max-width: 1440px) {
+  @media (max-width: 1024px) {
     .serviceSwiperLastItemButton {
         height: 4rem;
         width: 4rem;
@@ -1184,18 +1107,6 @@
         height: 1.25rem;
         width: 1.25rem;
     }
-  }
-  
-  @media (max-width: 900px) {
-    .serviceSwiperLastItemButton {
-        height: 5rem;
-        width: 5rem;
-    }
-  
-    .serviceSwiperLastItemButtonArrowSvg {
-        height: 1.5rem;
-        width: 1.5rem;
-    }
   
     .servicesSwiperLastItem:hover .serviceSwiperLastItemButton {
         border: solid 1px var(--color-primary);
@@ -1204,5 +1115,35 @@
     
     .servicesSwiperLastItem:hover .serviceSwiperLastItemButtonArrowSvg {
         fill: var(--color-primary);
+    }
+  } 
+
+  @media (min-width: 1025px) and (max-width: 1500px) {
+    .servicesSwiperItemDescription {
+      font-size: 1.05rem;
+      line-height: 1.15rem;
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+      text-wrap: nowrap;
+      text-align: left;
+    }
+
+    .servicesSwiperItemTitle { 
+      font-size: 1.75rem;
+      letter-spacing: 1px;
+      line-height: 2rem;
+      white-space: pre-line;
+    }
+
+    .servicesSwiperLastItemTitle {
+      font-size: 1.75rem;
+      letter-spacing: 1px;
+      line-height: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .servicesSwiperLastItemDescription {
+      font-size: 1.05rem;
+      line-height: 1.15rem;
     }
   }

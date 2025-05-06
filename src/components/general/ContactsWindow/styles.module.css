@@ -91,49 +91,41 @@
     text-transform: uppercase;
 }
 
+.numbersContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-family: "Montserrat", serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    white-space: pre-wrap;
+}
+
 .contactText {
     font-family: "Montserrat", serif;
     font-size: 1.3rem;
     font-weight: 500;
+    white-space: pre-wrap;
+    margin-bottom: 0.25rem;
+    text-align: left;
 }
 
 .contactAnchor {
     transition: all 0.25s ease-in;
+    display: block;
+    width: 100%;
     cursor: pointer;
     color: var(--color-text);
+    margin-bottom: 0.25rem;
 }
 
 .contactAnchor:hover {
     color: var(--color-secondary);
 }
 
-@media (max-width: 1440px) and (min-width: 769px) {
-    .mainTitle {
-        font-weight: 800;
-        font-size: 2.5rem;
-        line-height: 3rem;
-        margin-bottom: 3.5rem;
-    }
-
-    .contactsConatiner {
-        gap: 2rem;
-    }
-
-    .contactConatiner {
-        gap: 1rem;
-        max-width: 18rem;
-    }
-    
-    .contactTitle {
-        font-size: 1.15rem;
-    }
-    
-    .contactText {
-        font-size: 1.25rem;
-    }
-}
-
-@media (max-width: 769px) {
+@media (max-width: 1024px) {
     .window {
         flex-direction: column;
         padding: 1rem;
@@ -334,7 +326,7 @@
     color: var(--color-secondary);
 }
 
-@media (max-width: 769px) {
+@media (max-width: 1024px) {
     .mailConatiner {
         width: 100%;
         padding: 4rem 1rem;

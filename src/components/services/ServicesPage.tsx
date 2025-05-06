@@ -20,7 +20,8 @@ export default function ServicesPage() {
         service_2: false,
         service_3: false,
         service_4: false,
-        service_5: false
+        service_5: false,
+        service_6: false
     });
 
     useEffect(() => { 
@@ -58,7 +59,7 @@ export default function ServicesPage() {
             description: t("servicesWindow.services.service_1.description"),
             modalOpen: modals.service_1,
             closeModal: closeModal,
-            previousModalOpen: () => openModal("service_5"),
+            previousModalOpen: () => openModal("service_6"),
             thisModalOpen: () => openModal("service_1"), 
             nextModalOpen: () => openModal("service_2") 
         },
@@ -104,6 +105,17 @@ export default function ServicesPage() {
             closeModal: closeModal,
             previousModalOpen: () => openModal("service_4"),
             thisModalOpen: () => openModal("service_5"), 
+            nextModalOpen: () => openModal("service_6")
+        },
+        {
+            id: Constants.SERVICES_PAGE_SERVICE_6_ID,
+            imgSrc: Constants.SERVICES_PAGE_SERVICE_6_IMAGE,
+            title: t("servicesWindow.services.service_6.title"),
+            description: t("servicesWindow.services.service_6.description"),
+            modalOpen: modals.service_6,
+            closeModal: closeModal,
+            previousModalOpen: () => openModal("service_5"),
+            thisModalOpen: () => openModal("service_6"), 
             nextModalOpen: () => openModal("service_1")
         }
     ];

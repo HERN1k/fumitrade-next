@@ -98,7 +98,7 @@ const Modal: FC<IServiceModalProps> = (args) => {
                           onClick={(e) => { e.stopPropagation(); onPreviousModalClick(args); }}>
                           <Arrow className={styles.nextModalArrowSvg} />
                       </div>
-
+                          <a href=""></a>
                       <div 
                         className={styles.nextModalButton}
                           style={{ 
@@ -126,20 +126,23 @@ const Modal: FC<IServiceModalProps> = (args) => {
                                 <h2 className={styles.modalCompanyName}>
                                     {Constants.COMPANY_NAME}
                                 </h2>
-                                <h3 className={styles.modalTitle}>
-                                    {addLineBreaks(args.title?.length > 0 ? args.title.trim() : "Null")}
-                                </h3>
+                                <h3 className={styles.modalTitle} 
+                                    dangerouslySetInnerHTML={{
+                                        __html: addLineBreaks(args.title?.length > 0 ? args.title.trim() : "Null")
+                                    }}
+                                />
                                 <div className={styles.modalLine} />
-                                <p className={styles.modalDescription}>
-                                    {mainDescription}
-                                </p>
+                                <p className={styles.modalDescription} 
+                                    dangerouslySetInnerHTML={{
+                                        __html: mainDescription
+                                    }}
+                                />
                                 <ul className={styles.modalDescriptionItemsContainer}>
                                     {descriptionItems.map((item, index) => 
                                         <li key={index} className={styles.modalDescriptionItem}>
                                             <div 
                                                 className={styles.modalDescriptionItemSvg}
                                                 style={{ backgroundImage: `url(${getStaticFile(Constants.SERVICES_PAGE_STAR_SVG)})` }} />
-                                                
                                             {item} 
                                         </li>)}
                                 </ul>

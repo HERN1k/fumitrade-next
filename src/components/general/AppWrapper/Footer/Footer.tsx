@@ -11,7 +11,7 @@ import LocaleSwitcher from "@/components/general/LocaleSwitcher/LocaleSwitcher";
 
 import LogoImage from "../../../../../public/static/general/logo.webp";
 
-const Footer: FC = () => {
+const Footer: FC = () => { 
 
     const [hyphen, setHyphen] = useState<string>("\n");
 
@@ -54,19 +54,52 @@ const Footer: FC = () => {
                     <div className={styles.footerContact}>
                         <h2 className={styles.footerContactText}>{t("appWrapper.our_location")}</h2>
                         <a className={styles.footerContactAnchor} target="_blank" href={Constants.COMPANY_GOOGLE_MAPS_URL}>
-                            <h2 className={styles.footerContactText}>{t("appWrapper.location")}</h2>
+                            <h2 className={styles.footerContactText} style={{
+                                 textWrap: "wrap",
+                                 textTransform: "none"
+                            }}>{t("appWrapper.location")}</h2>
                         </a>
                     </div>
 
                     <div className={styles.footerContact}>
-                        <h2 className={styles.footerContactText}>{t("appWrapper.call_us")}</h2>
-                        <div>
-                            <a className={styles.footerContactAnchor} target="_blank" href={formattingPhoneNumber(Constants.COMPANY_FIRST_PHONE_NUMBER)}>
-                                <h2 className={styles.footerContactText}>{Constants.COMPANY_FIRST_PHONE_NUMBER}</h2>
-                            </a>
-                            <a className={styles.footerContactAnchor} target="_blank" href={formattingPhoneNumber(Constants.COMPANY_SECOND_PHONE_NUMBER)}>
-                                <h2 className={styles.footerContactText}>{Constants.COMPANY_SECOND_PHONE_NUMBER}</h2>
-                            </a>
+                        <h2 className={styles.footerContactText}>{t("appWrapper.representatives_in_ukraine")}</h2>
+                        <div className={styles.footerNumbersContainer}>
+                            <div>
+                                <h2 className={styles.footerContactText}>{t("appWrapper.north")}</h2>
+                                <h2 className={styles.footerContactText}>{t("appWrapper.central")}</h2>
+                                <h2 className={styles.footerContactText}>{t("appWrapper.west")}</h2>
+                                <h2 className={styles.footerContactText}>{t("appWrapper.south")}</h2>
+                            </div>
+                            <div>
+                                <a
+                                    className={styles.footerContactAnchor} 
+                                    target="_blank" 
+                                    href={formattingPhoneNumber(Constants.COMPANY_FIRST_PHONE_NUMBER)}
+                                >
+                                    {Constants.COMPANY_FIRST_PHONE_NUMBER}
+                                </a>
+                                <a
+                                    className={styles.footerContactAnchor} 
+                                    target="_blank" 
+                                    href={formattingPhoneNumber(Constants.COMPANY_SECOND_PHONE_NUMBER)}
+                                >
+                                    {Constants.COMPANY_SECOND_PHONE_NUMBER}
+                                </a>
+                                <a
+                                    className={styles.footerContactAnchor} 
+                                    target="_blank" 
+                                    href={formattingPhoneNumber(Constants.COMPANY_THIRD_PHONE_NUMBER)}
+                                >
+                                    {Constants.COMPANY_THIRD_PHONE_NUMBER}
+                                </a>
+                                <a
+                                    className={styles.footerContactAnchor} 
+                                    target="_blank" 
+                                    href={formattingPhoneNumber(Constants.COMPANY_FOURTH_PHONE_NUMBER)}
+                                >
+                                    {Constants.COMPANY_FOURTH_PHONE_NUMBER}
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -93,7 +126,12 @@ const Footer: FC = () => {
 
                 <p className={styles.footerText}>
                     {t("appWrapper.created_with_love_by")}
-                    <a className={styles.footerContactAnchor} target="_blank" href={Constants.DEVELOPER_CONNECTION_URL}> 
+                    <a 
+                        className={styles.footerContactAnchor} 
+                        style={{ display: "inline" }}
+                        target="_blank" 
+                        href={Constants.DEVELOPER_CONNECTION_URL}
+                    > 
                         <span className={styles.footerSpan}>{" " + Constants.DEVELOPER_NAME}</span>
                     </a>
                 </p>

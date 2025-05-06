@@ -14,11 +14,29 @@ export default function RootPage() {
   
   var userLocale = localStorage.getItem(Constants.USER_LOCALE_KEY);
 
-  if (userLocale && Constants.LOCALES.includes(userLocale)) {
+  var ruLang = langs.find(e => e === "ru-RU" || e === "ru");
+
+  if (userLocale === null) {
+    localStorage.setItem(Constants.USER_LOCALE_KEY, intersection);
+  }
+
+  if (ruLang !== undefined && ruLang !== null) {
+    localStorage.setItem(Constants.USER_LOCALE_KEY, "uk");
+
+    redirect("/uk");
+  }
+
+  if (userLocale !== null && !Constants.LOCALES.includes(userLocale)) {
+    localStorage.setItem(Constants.USER_LOCALE_KEY, "uk");
+
+    redirect("/uk");
+  }
+
+  if (userLocale !== null && Constants.LOCALES.includes(userLocale)) {
     intersection = userLocale;
   }
 
-  if (intersection) { 
+  if (intersection !== undefined && intersection !== null) { 
     redirect("/" + intersection);
   } else {
     redirect("/uk");
