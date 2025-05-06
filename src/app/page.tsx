@@ -8,36 +8,22 @@ export default function RootPage() {
     redirect("/uk");
   }
   
-  var langs = navigator.languages.map((lang) => new Intl.Locale(lang).language);
+  var locale = localStorage.getItem(Constants.USER_LOCALE_KEY);
 
-  var intersection = langs.filter(item => Constants.LOCALES.includes(item))[0];
-  
-  var userLocale = localStorage.getItem(Constants.USER_LOCALE_KEY);
-
-  var ruLang = langs.find(e => e === "ru-RU" || e === "ru");
-
-  if (userLocale === null) {
-    localStorage.setItem(Constants.USER_LOCALE_KEY, intersection);
-  }
-
-  if (ruLang !== undefined && ruLang !== null) {
+  if (locale === null) {
     localStorage.setItem(Constants.USER_LOCALE_KEY, "uk");
 
     redirect("/uk");
   }
 
-  if (userLocale !== null && !Constants.LOCALES.includes(userLocale)) {
+  if (locale !== null && !Constants.LOCALES.includes(locale)) {
     localStorage.setItem(Constants.USER_LOCALE_KEY, "uk");
 
     redirect("/uk");
   }
 
-  if (userLocale !== null && Constants.LOCALES.includes(userLocale)) {
-    intersection = userLocale;
-  }
-
-  if (intersection !== undefined && intersection !== null) { 
-    redirect("/" + intersection);
+  if (locale !== null) { 
+    redirect("/" + locale);
   } else {
     redirect("/uk");
   }
