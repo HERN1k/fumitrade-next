@@ -16,7 +16,7 @@ import KnowledgeItem from "@/components/knowledge-base/KnowledgeItem";
 import { TranslateOnAxis } from "@/scripts/translateOnAxis";
 
 export default function KnowledgeBasePage() {
- 
+  
     const isPC = (): boolean => {
         if (typeof window === "undefined") return true;
 

@@ -32,10 +32,10 @@
         "contacts": "Contacts",
         "dropDown": {
           "complex_processing": "Grain fumigation",
-          "aerosol_disinfestation": "Treatment of empty granaries",
+          "aerosol_disinfestation": "Treatment of empty granaries from collar pests",
           "rodent_traps": "Mill fumigation",
-          "disinfection_of_granaries": "Granary fumigation without transferring",
-          "fumigation_of_silos": "Rodent control",
+          "disinfection_of_granaries": "Grain fumigation without transfer",
+          "fumigation_of_silos": "Deratization",
           "fumigation_of_organic_products": "Fumigation of organic products"
         }
       },

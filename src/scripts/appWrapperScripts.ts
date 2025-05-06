@@ -1,12 +1,65 @@
 import MobileMenu from "@/components/general/AppWrapper/MobileMenu/MobileMenu";
 import PCMenu from "@/components/general/AppWrapper/PCMenu/PCMenu";
 import styles from "@/components/general/AppWrapper/styles.module.css";
+import servicesStyles from "@/components/services/styles.module.css";
 import Constants from "@/constants";
 import Header from "@/scripts/header";
 import { IAppWrapperOnResizeArgs, IElementBase } from "@/types";
 import { Dispatch, SetStateAction } from "react";
 import Swal, { SweetAlertOptions } from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+
+export const onServiceItemClick = (event: React.MouseEvent) => {
+    var lines = window.location.href.split("#");
+
+    var pageName = lines[0].split("/").splice(2)[2];
+
+    if (pageName === "services" && lines.length > 1) {
+        event.preventDefault();
+
+        var query = trimWithDots((event.target as HTMLElement).innerHTML, 28).toLocaleLowerCase();
+
+        var services = document.getElementsByClassName(servicesStyles.serviceTitle);
+
+        var element: HTMLElement | null = null;
+
+        for (var i = 0; i < services.length; i++) {
+            var service = services[i] as HTMLElement;
+
+            var serviceTitle = trimWithDots(service.innerHTML, 28).toLocaleLowerCase();
+            console.log(`${i}: ${serviceTitle} === ${query}`);
+            if (serviceTitle === query) {
+                element = service.parentElement;
+            }
+        }
+
+        if (element !== null) {
+            transitionToElement(element);
+            
+            element.click();
+        }
+    }
+}
+
+export const onKnowledgeBaseItemClick = (event: React.MouseEvent) => {
+    var lines = window.location.href.split("#");
+
+    var pageName = lines[0].split("/").splice(2)[2];
+
+    if (pageName === "knowledge-base" && lines.length > 1) {
+        event.preventDefault();
+
+        const hash = (event.target as HTMLElement).parentElement?.id.split("=")[1];
+
+        if (!hash) return;
+
+        const element = document.getElementById(hash);
+
+        if (element !== null) {
+            transitionToElement(element, "center");
+        }
+    }
+}
 
 export const onResize = (args: IAppWrapperOnResizeArgs) => {
     const headerElement = document.getElementById(Constants.HEADER_ID);

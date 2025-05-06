@@ -17,7 +17,7 @@ const Service: FC<IServiceProps> = (args) => {
         if (typeof window === "undefined") return true;
 
         return window.innerWidth > 1024;
-    }
+    } 
 
     const [isMobile, setIsMobile] = useState<boolean>(() => isPC() ? false : true);
 

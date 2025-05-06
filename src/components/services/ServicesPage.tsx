@@ -50,7 +50,7 @@ export default function ServicesPage() {
     const closeModal = (): void => {
         setModals(prev => Object.fromEntries(Object.keys(prev).map(key => [key, false])));
     };
-
+ 
     const servicesCollection: IServiceProps[] = [
         {
             id: Constants.SERVICES_PAGE_SERVICE_1_ID,

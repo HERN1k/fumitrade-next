@@ -6,7 +6,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { getKnowledgeItemsCollection } from "@/scripts/knowledgeBaseScripts";
 import { IKnowledgeBaseItem } from "@/types";
-import { trimWithDots } from "@/scripts/appWrapperScripts";
+import { onKnowledgeBaseItemClick, onServiceItemClick, trimWithDots } from "@/scripts/appWrapperScripts";
 import { createHashLink } from "@/scripts/servicesScripts";
 import { getServicesCollectionForHeader } from "@/scripts/collections";
 
@@ -31,25 +31,25 @@ const PCMenu: FC = () => {
                 </Link>
   
                 <div className={styles.menuItemDropDownContainer}>
-                    <Link href={`/services${createHashLink(servicesItemsCollection[0])}`}>
+                    <Link href={`/services${createHashLink(servicesItemsCollection[0])}`} onClick={onServiceItemClick}>
                         <div className={styles.menuItemDropDownItem}>{trimWithDots(t("appWrapper.menu.dropDown.complex_processing"), 28)}</div>
                     </Link>
-                    <Link href={`/services${createHashLink(servicesItemsCollection[1])}`}>
+                    <Link href={`/services${createHashLink(servicesItemsCollection[1])}`} onClick={onServiceItemClick}>
                         <div className={styles.menuItemDropDownItem}>{trimWithDots(t("appWrapper.menu.dropDown.aerosol_disinfestation"), 28)}</div>
                     </Link>
-                    <Link href={`/services${createHashLink(servicesItemsCollection[2])}`}>
+                    <Link href={`/services${createHashLink(servicesItemsCollection[2])}`} onClick={onServiceItemClick}>
                         <div className={styles.menuItemDropDownItem}>{trimWithDots(t("appWrapper.menu.dropDown.rodent_traps"), 28)}</div>
                     </Link>
-                    <Link href={`/services${createHashLink(servicesItemsCollection[3])}`}>
+                    <Link href={`/services${createHashLink(servicesItemsCollection[3])}`} onClick={onServiceItemClick}>
                         <div className={styles.menuItemDropDownItem}>{trimWithDots(t("appWrapper.menu.dropDown.disinfection_of_granaries"), 28)}</div>
                     </Link>
-                    <Link href={`/services${createHashLink(servicesItemsCollection[4])}`}>
+                    <Link href={`/services${createHashLink(servicesItemsCollection[4])}`} onClick={onServiceItemClick}>
                         <div className={styles.menuItemDropDownItem}>{trimWithDots(t("appWrapper.menu.dropDown.fumigation_of_silos"), 28)}</div>
                     </Link>
-                    <Link href={`/services${createHashLink(servicesItemsCollection[5])}`}>
+                    <Link href={`/services${createHashLink(servicesItemsCollection[5])}`} onClick={onServiceItemClick}>
                         <div className={styles.menuItemDropDownItem}>{trimWithDots(t("appWrapper.menu.dropDown.fumigation_of_organic_products"), 28)}</div>
                     </Link>
-                </div>
+                </div> 
             </li>
             <li className={styles.menuItem}>
                 <Link href="/about-us">
@@ -65,7 +65,7 @@ const PCMenu: FC = () => {
 
                 <div className={styles.menuItemDropDownContainer}>
                     {knowledgeItemsCollection.map((item) => 
-                        <Link href={`/knowledge-base#section${item.id}`} key={item.id}>
+                        <Link href={`/knowledge-base#section${item.id}`} key={item.id} id={`KnowledgeItemHash=#section${item.id}`} onClick={onKnowledgeBaseItemClick}>
                             <div className={styles.menuItemDropDownItem}>{trimWithDots(item.title, 28)}</div>
                         </Link>)}
                 </div>
