@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import AppWrapper from "@/components/general/AppWrapper/AppWrapper";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "../globals.css";
+import { Metadata } from "next";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -27,6 +28,22 @@ async function getMessages(locale: string) {
 export async function generateStaticParams() {
     return Constants.LOCALES.map((locale) => ({ locale }));
 }
+
+export const metadata: Metadata = {
+    title: "Fumitrade | Головна",
+    description: "Професійна дезінсекція без компромісів! Fumitrade – понад 30 років досвіду у сфері дезінсекції, захисту агропродукції та фумігації зернових і олійних культур.",
+    keywords: "Fumitrade, Фумітрейд, Фумитрейд, fumitrade.com.ua, fumitrade.ua, fumitrade.ua@gmail.com, дезінсекція, фумігація, знищення шкідників, дезинсекция, фумигация, уничтожение вредителей, disinsection, fumigation, pest control, Головна, Головна сторінка",
+    robots: { index: true, follow: true },
+    icons: { icon: "https://fumitrade.com.ua/favicon.ico" },
+    openGraph: {
+        type: "website",
+        url: "https://fumitrade.com.ua",
+        siteName: "Fumitrade",
+        title: "Fumitrade | Головна",
+        description: "Професійна дезінсекція без компромісів! Fumitrade – понад 30 років досвіду у сфері дезінсекції, захисту агропродукції та фумігації зернових і олійних культур.",
+        images: ["https://fumitrade.com.ua/static/general/ico.webp"],
+    },
+};
 
 export default async function RootLayout({
     children,
@@ -53,7 +70,7 @@ export default async function RootLayout({
                         "@type": "Organization",
                         "name": "Професійна дезінсекція без компромісів!",
                         "url": "https://fumitrade.com.ua/",
-                        "logo": "https://fumitrade.com.ua/static/general/ico.webp",
+                        "logo": "https://fumitrade.com.ua/favicon.ico",
                         "description": "Професійна дезінсекція без компромісів! Fumitrade – понад 30 років досвіду у сфері дезінсекції, захисту агропродукції та фумігації зернових і олійних культур.",
                         "contactPoint": { 
                             "@type": "ContactPoint",
