@@ -2,7 +2,7 @@ import { SitemapStream, streamToPromise } from "sitemap";
 import { createWriteStream } from "fs";
 import { resolve } from "path";
 
-const locales = ["en", "uk"];
+const locales = ["uk"];
 const baseUrl = "https://fumitrade.com.ua";
 
 const staticRoutes = ["", "about-us", "services", "contact", "knowledge-base"];

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Професійна дезінсекція без компромісів! Fumitrade – понад 30 років досвіду у сфері дезінсекції, захисту агропродукції та фумігації зернових і олійних культур.",
   keywords: "Fumitrade, Фумітрейд, Фумитрейд, fumitrade.com.ua, fumitrade.ua, fumitrade.ua@gmail.com, дезінсекція, фумігація, знищення шкідників, дезинсекция, фумигация, уничтожение вредителей, disinsection, fumigation, pest control, Головна, Головна сторінка",
   robots: { index: true, follow: true },
-  icons: { icon: "/static/general/ico.webp" },
+  icons: { icon: "https://fumitrade.com.ua/favicon.ico" },
   openGraph: {
     type: "website",
     url: "https://fumitrade.com.ua",
